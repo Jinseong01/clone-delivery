@@ -10,7 +10,7 @@
 2) Json 변환 시의 snakecase 설정 등을 위해 custom한 ObjectMapperConfig 생성
 3) API 문서화 등 유용한 swagger ui 설정
 4) Swagger Ui에도 custom한 ObejctMapper를 사용하기 위해 SwaggerConfig 생성
-5) 
+5) filter를 통해 클라이언트에 응답하기 전, request와 response에 대한 로그
 
 - db 패키지
 1) Entity의 공통되는 id부분을 BaseEntity로 따로 구성
