@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+
+    //버전은 명시하지 않아도 부모 프로젝트에서 참고함
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+group = 'org.delivery'
+version = '1.0-SNAPSHOT'
+
+//롬복 설정
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+     //롬복설정
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    //JPA설정
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //mySQL연동
+    runtimeOnly 'com.mysql:mysql-connector-j'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//bootJar는 안쓰고 / 그냥jar는 쓴다
+bootJar {
+    enabled = false
+}
+jar {
+    enabled = true
+}
