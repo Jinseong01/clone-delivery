@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @Slf4j
 @RestControllerAdvice
-@Order(value = Integer.MIN_VALUE)
+@Order(value = Integer.MIN_VALUE)  //최우선 순위
 public class ApiExceptionHandler {
     @ExceptionHandler(value = ApiException.class)
     public ResponseEntity<Api<Object>> apiException(ApiException apiException) {

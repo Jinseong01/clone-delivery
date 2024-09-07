@@ -54,7 +54,7 @@ public class LoggerFilter implements Filter {
 
         log.info("<<<< uri : {}, method : {}, header : {}, body : {}", uri, method, responseHeaderValues, responseBody);
 
-        //캐시된 res의 body부분 내용을 실제로 전송해주기 위한 메소드
+        //캐시한 res의 body내용을 실제로 전송하기 위한 메소드
         res.copyBodyToResponse();
     }
 }

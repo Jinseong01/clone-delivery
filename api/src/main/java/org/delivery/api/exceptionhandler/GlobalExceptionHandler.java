@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @Slf4j
-@RestControllerAdvice //예외를 끌어모음
-@Order(value = Integer.MAX_VALUE) //가장 마지막에 실행되도록 순서 지정
+@RestControllerAdvice  //예외를 끌어모음
+@Order(value = Integer.MAX_VALUE)  //가장 마지막에 실행되도록 순서 지정
 public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<Api<Object>> exception(Exception exception) {
