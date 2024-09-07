@@ -14,6 +14,7 @@
   6. Api 공통 spec을 설정하여 response 형식을 통일
   7. Api 에러 코드 추가
   8. GlobalExceptionHandler와 ApiExceptionHandler를 통해 각각의 에러 관리
+  9. Interceptor로 인증하기 위한 구조 생성 & 인증 제외 주소를 관리하는 WebConfig 생성
 
 - db 패키지
   1. Entity의 공통되는 id부분을 BaseEntity로 따로 구성
