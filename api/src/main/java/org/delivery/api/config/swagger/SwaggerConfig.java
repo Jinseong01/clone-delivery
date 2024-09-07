@@ -5,7 +5,7 @@ import io.swagger.v3.core.jackson.ModelResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//swagger에서의 스네이크케이스등을 위한 설정
+//swagger-ui에서의 스네이크케이스등을 위한 설정
 @Configuration
 public class SwaggerConfig {
 
