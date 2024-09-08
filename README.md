@@ -24,6 +24,10 @@
   2. account 테이블 생성하여 테스트
 
 ## 2024/09/08
+- api
+  1. 사용자 관련된 로직 구조(business, controller, converter, sevice) 세팅
+  2. UserOpenApiController와 관련된 가입과 로그인(토큰X) 구현
+
 - db
   1. UserEntity와 UserRepository 작성
 
