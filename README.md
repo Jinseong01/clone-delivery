@@ -1,6 +1,6 @@
 # clone-delivery
 
-## 09/07
+## 2024/09/07
 - 공통
   1. 스프링 프로젝트를 자바 프로젝트로 생성하여 멀티 모듈 구성
   2. Build.gradle에 직접 설정 추가
@@ -22,3 +22,10 @@
 - MySQL
   1. delivery 스키마 생성
   2. account 테이블 생성하여 테스트
+
+## 2024/09/08
+- db
+  1. UserEntity와 UserRepository 작성
+
+- MySQL
+  1. user 테이블 생성
