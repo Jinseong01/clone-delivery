@@ -27,6 +27,7 @@
 - api
   1. 사용자 관련된 로직 구조(business, controller, converter, sevice) 세팅
   2. UserOpenApiController와 관련된 가입과 로그인(토큰X) 구현
+  3. Token 구현하여 UserOpenApiController의 로그인과 연결
 
 - db
   1. UserEntity와 UserRepository 작성
