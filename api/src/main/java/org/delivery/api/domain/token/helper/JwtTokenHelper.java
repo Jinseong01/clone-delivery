@@ -32,18 +32,23 @@ public class JwtTokenHelper implements TokenHelperIfs {
 
     @Override
     public TokenDto issueAccessToken(Map<String, Object> data) {
+        // 만료시간
         var expiredLocalDateTime = LocalDateTime.now().plusHours(accessTokenPlusHour);
 
+        // 만료시간을 Date형식으로 변환
         var expiredAt = Date.from(expiredLocalDateTime.atZone(ZoneId.systemDefault()).toInstant());
 
+        // 서명키
         var key = Keys.hmacShaKeyFor(secretKey.getBytes());
 
+        // 토큰 생성
         var jwtToken = Jwts.builder()
                 .signWith(key, SignatureAlgorithm.HS256)
                 .setClaims(data)
                 .setExpiration(expiredAt)
                 .compact();
 
+        // 토큰DTO 반환
         return TokenDto.builder()
                 .token(jwtToken)
                 .expiredAt(expiredLocalDateTime)
@@ -72,15 +77,19 @@ public class JwtTokenHelper implements TokenHelperIfs {
 
     @Override
     public Map<String, Object> validationTokenWithThrow(String token) {
+        // 서명키 생성
         var key = Keys.hmacShaKeyFor(secretKey.getBytes());
 
+        // 생성한 서명키의 JWT 파서 생성  (파서는 해석하고 데이터 추출하는 역할)
         var parser = Jwts.parser()
                 .setSigningKey(key)
                 .build();
 
         try {
+            // 토큰 검사
             var result = parser.parseClaimsJws(token);
 
+            // 이상이 없다면, 토큰의 body부분(userId) 반환
             return new HashMap<String, Object>(result.getBody());
 
         }
