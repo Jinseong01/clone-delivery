@@ -44,6 +44,9 @@
       
 
 ## 2024/09/15
+- api 패키지
+  1. Store와 관련된 Controller, Converter, Service 등의 서비스 로직 개발
+
 - db 패키지
   1. StoreEntity, StoreRepository 생성
 
