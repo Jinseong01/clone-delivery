@@ -44,8 +44,21 @@
       
 
 ## 2024/09/15
+- api 패키지
+  1. Store와 관련된 Controller, Converter, Service 등의 서비스 로직 개발
+
 - db 패키지
   1. StoreEntity, StoreRepository 생성
 
 - MySQL
   1. store 테이블 생성
+
+## 2024/09/16
+- api 패키지
+  1. StoreMenu와 관련된 Controller, Converter, Service 등의 서비스 로직 개발
+
+- db 패키지
+  1. StoreMenuEntity, StoreMenuRepository 생성
+
+- MySQL
+  1. store_menu 테이블 생성 (store와 store_menu는 1대N 관계)
